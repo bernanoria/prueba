@@ -1,0 +1,20 @@
+---
+- hosts: 192.168.221.124
+  become: yes
+  tasks:
+    - name: instalo apacche
+      apt:
+        name: apache2
+        state: latest
+    - name: instalo php
+      apt:
+        name: php
+        state: latest
+    - name: copio archivo hola mundo
+      copy:
+        src: /home/bernardo/Escritorio/holamundo.php
+        dest: /var/www/html/hola.php
+    - name: reinicio apache2
+      service:
+        name: apache2
+        state: restarted
