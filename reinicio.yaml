@@ -5,5 +5,5 @@
   tasks:
     - name: reinicio apache
       service:
-        name: servicio
+        name: {{servicio}}
         state: restarted
