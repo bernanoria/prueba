@@ -5,5 +5,5 @@
   tasks:
     - name:  copio archivo
       copy:
-        src: archivo
+        src: {{archivo}}
         dest: /var/www/html/hola.php 
