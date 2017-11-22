@@ -1,7 +1,9 @@
 - hosts: 192.168.221.124
   become: yes
+  vars:
+    archivo: '{{pathArchivo}}'
   tasks:
     - name:  copio archivo
       copy:
-        src: holamundo.php
+        src: archivo
         dest: /var/www/html/hola.php 
