@@ -1,0 +1,7 @@
+- hosts: 192.168.221.124
+  become: yes
+  tasks:
+    - name: reinicio apache
+      service:
+        name: apache2
+        state: restarted

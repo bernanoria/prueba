@@ -1,0 +1,7 @@
+- hosts: 192.168.221.124
+  become: yes
+  tasks:
+    - name:  copio archivo
+      copy:
+        src: holamundo.php
+        dest: /var/www/html/hola.php 
