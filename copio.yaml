@@ -3,6 +3,10 @@
   vars:
     archivo: "{{pathArchivo}}"
   tasks:
+    - name: instalo apache
+      apt:
+        name: apache2
+        state: latest
     - name:  copio archivo
       copy:
         src: "{{archivo}}"
