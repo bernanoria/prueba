@@ -3,14 +3,13 @@ node {
 	def workingDir = pwd()
 	
  	stage('PRINT'){
-		sh 'ls ${workingdir} > output.txt'
+		def output = sh returnStdout: true, script: 'ls -la ${workingDir}'
+		println output
  	}
 	
 	stage('Corro copia'){
 
 		dir("${workingDir}") {
-			
-			print ${workingDir}
 		
 			sh 'ansible-playbook copio.yaml -i host --private-key ../../.ssh/clave -e pathArchivo=${archivo}'
 			
