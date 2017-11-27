@@ -3,7 +3,7 @@ node {
 	def workingDir = pwd()
 	
  	stage('PRINT'){
-		def output = sh returnStdout: true, script: 'ls -la ..'
+		def output = sh returnStdout: true, script: 'ls -la ${workingDir}@tmp'
 		println output
  	}
 	
