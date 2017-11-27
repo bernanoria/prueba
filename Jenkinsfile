@@ -5,6 +5,10 @@ node {
  	stage('PRINT'){
 		def output = sh returnStdout: true, script: "ls -la .."
 		println output
+		println "---------------------------"
+		def output2 = sh returnStdout: true, script: "ls -la"
+		println output2
+		
  	}
 	
 	stage('Corro copia'){
