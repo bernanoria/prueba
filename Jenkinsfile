@@ -15,7 +15,7 @@ node {
 	stage('Corro reinicio'){
 
 		if (params.RESTART==true){
-			sh 'ansible-playbook reinicio.yaml -i host --private-key ../../.ssh/clave'
+			sh 'ansible-playbook reinicio.yaml -i host --private-key ../../.ssh/clave -e service=apache2'
 
 		}
 	}	
