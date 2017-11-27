@@ -4,7 +4,7 @@ node {
 	
 	stage('PRINT'){
 
-		sh "ls ${workingdir}"
+		sh 'ls ${workingdir}'
 	}
 	
 	stage('Corro copia'){
