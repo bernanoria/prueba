@@ -2,6 +2,10 @@ node {
 
 	def workingDir = pwd()
 	
+ 	stage('PRINT'){
+		sh 'ls ${workingdir} > output.txt'
+ 	}
+	
 	stage('Corro copia'){
 
 		dir("${workingDir}@tmp/") {
