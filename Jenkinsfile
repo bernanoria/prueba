@@ -8,8 +8,7 @@ node {
 	
 	stage('Corro copia'){
 
-		ansiblePlaybook credentialsId: 'jen', extras: 'pathArchivo=holamundo.php', inventory: 'host', playbook: 'copio.yaml', sudoUser: null
-
+		sh 'ansible-playbook copio.yaml -i host --private-key ../../.ssh/clave -e pathArchivo=holamundo.php'
 	}
 
 	stage('Corro reinicio'){
