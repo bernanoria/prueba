@@ -1,11 +1,5 @@
 node {
-	
-	stage ('Traigo'){
 
-	git 'https://github.com/bernanoria/prueba'
-
-	}
-	
 	stage('Corro copia'){
 
 		sh 'ansible-playbook copio.yaml -i host --private-key ../../.ssh/clave -e pathArchivo=${archivo}'
