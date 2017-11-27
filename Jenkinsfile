@@ -8,7 +8,7 @@ node {
 	
 	stage('Corro copia'){
 
-		dir("${workingDir}@tmp/") {
+		dir("${workingDir}") {
 		
 			sh 'ansible-playbook copio.yaml -i host --private-key ../../.ssh/clave -e pathArchivo=${archivo}'
 			
