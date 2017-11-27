@@ -1,3 +1,4 @@
 
 [prueba]
-192.168.221.124 ansible_ssh_user=prueba ansible_sudo_pass=prueba 
+192.168.221.124 ansible_ssh_user=prueba ansible_sudo_pass=prueba
+192.168.221.46  ansible_ssh_user=prueba ansible_sudo_pass=prueba
