@@ -1,5 +1,12 @@
 node {
 
+	def workingDir = pwd()
+	
+	stage('PRINT'){
+
+		println workingDir
+	}
+	
 	stage('Corro copia'){
 
 		sh 'ansible-playbook copio.yaml -i host --private-key ../../.ssh/clave -e pathArchivo=${archivo}'
